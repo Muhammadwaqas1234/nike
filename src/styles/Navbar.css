@@ -1,0 +1,143 @@
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 30px;
+    color: #000000;
+    background-color: #ffffff;
+    position: fixed;
+    width: 97%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  
+  /* Logo */
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  /* Logo Styling */
+.logo img {
+    height: 50px; /* Adjust size as needed */
+    width: auto;
+    display: block;
+  }
+  
+  
+  
+  /* Desktop Navigation */
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+  }
+  
+  .nav-links li a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .nav-links li a:hover {
+    color: #490ea2;
+  }
+  
+  /* Icons */
+  .nav-icons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+  
+  /* Move icons slightly to the left on larger screens */
+  @media screen and (min-width: 1024px) {
+    .nav-icons {
+      margin-left: -20px; /* Move icons slightly to the left */
+    }
+  }
+  
+  /* Individual icon styling */
+  .icon {
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    color: #000000;
+  }
+  
+  .icon:hover {
+    color: #490ea2;
+  }
+  
+  /* Mobile Menu Button */
+  .menu-toggle {
+    display: none; /* Hidden on larger screens */
+    font-size: 28px;
+    cursor: pointer;
+    position: relative;
+    z-index: 2000;
+  }
+  
+  .menu-icon {
+    color: #000000;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    color: #ffffff ;
+    padding: 10px 0;
+    display: none;
+    flex-direction: column;
+  }
+  
+  /* Show Dropdown When Menu is Open */
+  .dropdown-menu.active {
+    display: flex;
+  }
+  
+  .dropdown-menu ul li a {
+    color: #000000; /* Set text color to white */
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+  }
+  
+  
+  @media screen and (max-width: 768px) {
+    .nav-links {
+      display: none;
+    }
+  
+    .menu-toggle {
+      display: block;
+      margin-right: 15px; /* Adds spacing between the menu toggle and other icons */
+    }
+  
+    .nav-icons {
+      display: flex;
+      gap: 20px; /* Adds more spacing between icons */
+      align-items: center;
+      margin-right: 10px; /* Ensures icons are not too close to the edge */
+    }
+  
+    .icon {
+      font-size: 24px; /* Slightly increase size for better visibility */
+    }
+  }
+  /* Adjust logo size on smaller screens */
+  @media screen and (max-width: 768px) {
+    .logo img {
+      height: 40px; /* Smaller logo on mobile */
+    }
+  }
+  

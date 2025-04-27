@@ -1,0 +1,137 @@
+.sale-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 50px;
+    flex-wrap: wrap;
+}
+
+.sale-box {
+    position: relative;
+    width: 48%;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.sale-box.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.sale-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 10px;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.sale-box.show .sale-image {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.sale-content {
+    position: absolute;
+    top: 25%;  /* Moved text even higher */
+    left: 10%;
+    transform: translateY(-50%);
+    text-align: left;
+    color: white;
+    padding: -20px;
+    border-radius: 10px;
+    width: 45%; /* Ensures text fits well */
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: opacity 1s ease-out 0.5s, transform 1s ease-out 0.5s;
+}
+
+.sale-box.show .sale-content {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.sale-content p {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: -25px;
+}
+
+.sale-content h1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    line-height: 1.2;
+}
+
+/* Button Styling */
+.shop-now, .buy-now {
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.shop-now:hover, .buy-now:hover {
+    background: #e60000;
+}
+
+@media (max-width: 1024px) {
+    .sale-section {
+        padding: 30px;
+    }
+    
+    .sale-box {
+        width: 100%;
+    }
+
+    .sale-content {
+        width: 60%;
+        left: 5%;
+        top: 22%;
+    }
+}
+
+@media (max-width: 768px) {
+    .sale-section {
+        flex-direction: column;
+        gap: 30px;
+        padding: 20px;
+    }
+
+    .sale-box {
+        width: 100%;
+    }
+
+    .sale-content {
+        width: 80%;
+        left: 5%;
+        top: 18%;
+    }
+
+    .sale-content h1 {
+        font-size: 26px;
+    }
+
+    .sale-content p {
+        font-size: 16px;
+    }
+
+    .shop-now, .buy-now {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}

@@ -1,0 +1,127 @@
+/* Centered Payment Container */
+.payment-container {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+  text-align: center;
+  padding: 30px 20px;
+  align-items: LEFT;
+  
+}
+
+/* Title & Subtitle */
+.payment-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+.payment-subtitle {
+  font-size: 1.2rem;
+  color: #000000;
+  margin-bottom: 25px;
+}
+
+/* Payment Options Section */
+.payment-options {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Payment Buttons */
+.payment-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  min-width: 220px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.jazzcash {
+  background-color: #e31837;
+  color: white;
+}
+
+.easypaisa {
+  background-color: #00a859;
+  color: white;
+}
+
+/* Payment Button Hover Effect */
+.payment-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Payment Logos */
+.payment-logo {
+  width: 35px;
+  margin-right: 12px;
+}
+
+/* Back Button */
+.back-button {
+  margin-top: 30px;
+  padding: 12px 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.back-button:hover {
+  background-color: #222;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .payment-options {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .payment-button {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .payment-title {
+    font-size: 2rem;
+  }
+
+  .payment-subtitle {
+    font-size: 1rem;
+  }
+
+  .payment-button {
+    padding: 12px 20px;
+    font-size: 1rem;
+  }
+
+  .payment-logo {
+    width: 30px;
+  }
+}

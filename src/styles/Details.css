@@ -1,0 +1,157 @@
+/* General Container - Centered and Professional */
+.details-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 10px;
+}
+
+/* Centering the Details Box */
+.details-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+/* Details Box */
+.details-box {
+    display: flex;
+    background: #fff;
+    border-radius: 16px;
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.details-box:hover {
+    transform: translateY(-5px);
+}
+
+.details-close {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    background: transparent;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #f4eded;
+    transition: color 0.3s ease;
+}
+
+.details-close:hover {
+    color: #d9534f;
+}
+
+/* Left Side - Image */
+.details-image {
+    width: 50%;
+    object-fit: cover;
+    border-radius: 16px 0 0 16px;
+    transition: transform 0.3s ease;
+}
+
+.details-image:hover {
+    transform: scale(1.03);
+}
+
+/* Right Side - Details */
+.details-info {
+    width: 55%;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.details-title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.details-info p {
+    font-size: 1.15rem;
+    color: #444;
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+.details-discount {
+    color: #000000;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+/* Action Buttons */
+.details-actions {
+    margin-top: 25px;
+    display: flex;
+    gap: 15px;
+}
+
+.action-button {
+    flex: 1;
+    padding: 14px 18px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.action-button:hover {
+    transform: translateY(-3px);
+    opacity: 0.95;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+}
+
+.action-pay {
+    background: #000000;
+    color: white;
+}
+
+.action-cart {
+    background: #000000;
+    color: white;
+}
+
+.action-favorite {
+    background: #000000;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .details-box {
+        flex-direction: column;
+        width: 95%;
+    }
+
+    .details-image {
+        width: 100%;
+        height: 250px;
+        border-radius: 16px 16px 0 0;
+    }
+
+    .details-info {
+        width: 100%;
+        padding: 25px;
+    }
+
+    .details-actions {
+        flex-direction: column;
+        gap: 12px;
+    }
+}

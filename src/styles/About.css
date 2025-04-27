@@ -1,0 +1,100 @@
+/* Prevent horizontal scrolling */
+html, body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  
+  /* About Section */
+  .about-section {
+    padding: 50px 0;
+    background-color: #000000;
+    
+  }
+  
+  /* About Container */
+  .about-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+  
+  /* About Card */
+  .about-card {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 0px;
+    opacity: 0;  
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+  }
+  
+  /* When the card is visible, it animates in */
+  .about-card.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Image Styling */
+  .about-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(100%);
+    transition: transform 0.4s ease-in-out, filter 0.4s ease-in-out;
+  }
+  
+  /* Hover Animation - Zoom and Slight Lift */
+  .about-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .about-card:hover .about-image {
+    transform: scale(1.1);
+    filter: brightness(100%);
+  }
+  
+  /* Title Styling */
+  .about-title {
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #000000;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-align: center;
+    width: max-content;
+  }
+  
+  /* Explore Button */
+  .explore-btn {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    font-weight: bold;
+    transform: translateX(-50%);
+    background-color: #000000;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .explore-btn:hover {
+    background-color: #2e2c2c;
+    color: white;
+
+  }
+  

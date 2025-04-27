@@ -1,0 +1,110 @@
+/* General Styles */
+.home {
+    width: 100vw;
+    height: 100vh;
+    background: url("../assets/img/hero-banner.png") no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 10%;
+    color: #000000;
+    position: relative;
+  }
+  
+  /* Responsive Adjustments */
+  @media screen and (max-width: 768px) {
+    .home {
+      background-position: right center;
+      padding: 0 5%;
+      justify-content: flex-start;
+      text-align: left;
+      color: white;
+    }
+  }
+  
+  .home-content {
+    position: relative;
+    max-width: 450px;
+    z-index: 1;
+  }
+  
+  /* Text Styling */
+  .normal-text {
+    font-size: 36px;
+    font-weight: 400;
+  }
+  
+  .bold-text {
+    font-size: 42px;
+    font-weight: 700;
+    margin-top: -25px;
+  }
+  
+  .home-content p {
+    font-size: 18px;
+    margin: 5px;
+    line-height: 1.5;
+    margin-top: -15px;
+  }
+  
+  /* Animation Effect */
+  .animate-text {
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in-out forwards;
+  }
+  
+  /* Button Styling */
+  .shop-btn {
+    display: inline-block;
+    background: #000000;
+    color: white;
+    padding: 12px 20px;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: 0.3s;
+  }
+  
+  .shop-btn:hover {
+    background: #434342;
+    color: #ffffff;
+  }
+  
+  /* Mobile Adjustments */
+  @media screen and (max-width: 768px) {
+    .home-content {
+      max-width: 90%;
+      padding: 0 10px;
+    }
+  
+    .normal-text {
+      font-size: 28px;
+    }
+  
+    .bold-text {
+      font-size: 32px;
+    }
+  
+    .home-content p {
+      font-size: 16px;
+    }
+  
+    .shop-btn {
+      font-size: 16px;
+      padding: 10px 18px;
+    }
+  }
+  
+  /* Fade-in effect for each word */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
